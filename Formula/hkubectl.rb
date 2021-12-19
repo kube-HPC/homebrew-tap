@@ -12,11 +12,11 @@ class Hkubectl < Formula
         bin.install "hkubectl-macos" => "hkubectl"
 
         # Install bash completion
-        output = Utils.popen_read("#{bin}/hkubectl completion bash")
+        output = Utils.safe_popen_read("#{bin}/hkubectl", "completion", "bash")
         (bash_completion/"hkubectl").write output
 
         # Install zsh completion
-        output = Utils.popen_read("#{bin}/hkubectl completion zsh")
+        output = Utils.safe_popen_read("#{bin}/hkubectl", "completion", "zsh")
         (zsh_completion/"_hkubectl").write output
       end
     end
@@ -31,11 +31,11 @@ class Hkubectl < Formula
         bin.install "hkubectl-linux" => "hkubectl"
 
         # Install bash completion
-        output = Utils.popen_read("#{bin}/hkubectl completion bash")
+        output = Utils.safe_popen_read("#{bin}/hkubectl", "completion", "bash")
         (bash_completion/"hkubectl").write output
 
         # Install zsh completion
-        output = Utils.popen_read("#{bin}/hkubectl completion zsh")
+        output = Utils.safe_popen_read("#{bin}/hkubectl", "completion", "zsh")
         (zsh_completion/"_hkubectl").write output
       end
     end
