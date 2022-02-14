@@ -5,8 +5,8 @@ class Hkubectl < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kube-HPC/hkubectl/releases/download/v1.1.69/hkubectl-macos"
-      sha256 "46c9cd60fd79e3af3eeb849d3557fc4e2f4ce6c8b6a741441392242e12761e36"
+      url "https://github.com/kube-HPC/hkubectl/releases/download/v1.1.71/hkubectl-macos"
+      sha256 "aca5a512fc96b96ee0a9fb97e0f2fd1cbc6da7cb30235b7f8dc02cbf127a0605a5200d2fc4bc7b56ffa9ff24cf648812761ad1e33b4f7ffa46069a00c07c1795"
 
       def install
         bin.install "hkubectl-macos" => "hkubectl"
@@ -24,8 +24,8 @@ class Hkubectl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kube-HPC/hkubectl/releases/download/v1.1.69/hkubectl-linux"
-      sha256 "4cf8630c8e50fbcbda88d9cee1763708d9aff8fde2f5fb0563a9ffe464b4607d"
+      url "https://github.com/kube-HPC/hkubectl/releases/download/v1.1.71/hkubectl-linux"
+      sha256 "1d661dc97d88373b6f7a66b375bf8d027c4cabf5f661df4f86d487b8fd06627f5a25a020d81e88c3c14b8dd911ce6c155985dec42c68218843de7ef616236737"
 
       def install
         bin.install "hkubectl-linux" => "hkubectl"
